@@ -1,0 +1,5 @@
+       1710 = sha512($pass.$salt)
+       1720 = sha512($salt.$pass)
+       1730 = sha512(unicode($pass).$salt)
+       1740 = sha512($salt.unicode($pass))
+       6500 = AIX {ssha512}
