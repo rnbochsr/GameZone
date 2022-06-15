@@ -61,7 +61,7 @@ Using the page we logged into earlier, we're going point SQLMap to the game revi
 
 First we need to intercept a request made to the search feature using BurpSuite.
 
-![[image-01.png]]
+![[images/image-01.png]]
 Save this request into a text file. We can then pass this into SQLMap to use our authenticated user session.
 `sqlmap -r request.txt --dbms=mysql --dump`
 
@@ -69,7 +69,7 @@ Save this request into a text file. We can then pass this into SQLMap to use our
 `--dbms` tells SQLMap what type of database management system it is
 `--dump` attempts to outputs the entire database
 
-![[image-02.png]]
+![[images/image-02.png]]
 
 SQLMap will now try different methods and identify the one thats vulnerable. Eventually, it will output the database.
 
@@ -105,7 +105,7 @@ Now you have a password and username. Try SSH'ing onto the machine.
 *What is the user flag?* 64[REDACTED]5c
 
 ## Task 5 - Exposing services with reverse SSH tunnels
-![[image-03.png]]
+![[images/image-03.png]]
 
 Reverse SSH port forwarding specifies that the given port on the remote server host is to be forwarded to the given host and port on the local side.
 
@@ -146,11 +146,11 @@ From our local machine, run `ssh -L 10000:localhost:10000 <username>@<ip>`.
 
 Once complete, in your browser type "localhost:10000" and you can access the newly-exposed webserver.
 
-![[Webmin-01.png]]
+![[images/image-05.png]]
 
 *What is the name of the exposed CMS?* We[REDACTED]in
 
-![[Webmin-02a.png]]
+![[images/image-07.png]]
 
 *What is the CMS version?* 1[REDACTED]0
 
