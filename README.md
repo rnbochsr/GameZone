@@ -89,7 +89,7 @@ This program works by taking a wordlist, hashing it with the specified algorithm
 **Answer the questions below**
 
 If you are using a low-powered laptop, you can deploy a high spec'd Kali Linux machine on TryHackMe and control it in your browser.
-Deploy your own (here)[https://tryhackme.com/room/kali]!
+Deploy your own [here](https://tryhackme.com/room/kali)!
 
 Once you have JohnTheRipper installed you can run it against your hash using the following arguments:
 `john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt --format=Raw-SHA256`
